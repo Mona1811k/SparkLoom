@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Booking History</title>
+    <link rel="stylesheet" href="hist.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo1.jpg" alt="Statiq">
+            <span class="logo-text">SparkLoom</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#partners">Partner with Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="/home" class="highlight">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Slot Booking History</h1>
+    <form action="/history" method="post">
+        <label for="registerNumber">Enter Register Number:</label>
+        <input type="text" id="registerNumber" name="registerNumber" required>
+        <button type="submit">Get History</button>
+    </form>
+
+    <% if (slotHistory && slotHistory.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Register Number</th>
+                    <th>Year of Studying</th>
+                    <th>Station</th>
+                    <th>Vehicle Type</th>
+                    <th>Start Date</th>
+                    <th>StartTime</th>
+                    <th>End Time</th>
+                    <th>College</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% slotHistory.forEach(slot => { %>
+                    <tr>
+                        <td><%= slot.username %></td>
+                        <td><%= slot.registerNumber %></td>
+                        <td><%= slot.yearOfStudying %></td>
+                        <td><%= slot.station %></td>
+                        <td><%= slot.vehicleType %></td>
+                        <td><%= new Date(slot.startDate).toLocaleDateString() %></td>
+                        <td><%= slot.startTime %></td>
+                        <td><%= slot.endTime %></td>
+                        <td><%= slot.college %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else if (slotHistory === null) { %>
+        <p>Please enter a register number to view history.</p>
+    <% } else { %>
+        <p>No slot history found for the given register number.</p>
+    <% } %>
+</body>
+</html>
+
+

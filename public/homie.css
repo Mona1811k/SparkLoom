@@ -1,0 +1,420 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: black;
+}
+
+header {
+    background: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.highlight {
+    background: #094837;
+    border-radius: 5px;
+}
+.header-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.header-info h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-info p {
+    margin: 10px 0;
+    color: #6c757d;
+}
+.header-info a{
+    display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+}
+.header-info a:hover{
+    background-color: #d62839;
+}
+.book-now {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #c9cfd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px; /* Creates the oval shape */
+    transition: background-color 0.3s ease;
+}
+.book-now:hover {
+    background-color: hsl(210, 18%, 91%);
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+.overlay h1:hover{
+    background-color: #264933b4;
+}
+
+.overlay p {
+    font-size: 1.2em;
+}
+
+.download {
+    margin-top: 20px;
+}
+
+.download .app-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.download .app-icons img {
+    width: 120px;
+}
+
+/* EV Charging section */
+.ev-charging {
+    padding: 60px 20px;
+    background: #000000;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image-overlay {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.homi-image {
+    width: 100%;
+    border-radius: 10px;
+filter: blur(1px);
+left:20%
+
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+left:110%;
+    
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overlay-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+
+.overlay-text p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.overlay h2 {
+    font-size: 8em; /* Adjust the size as needed */
+    margin-top: 20px; /* Add space above the title */
+    color: white; /* Ensure the text color is readable */
+    text-align: center; /* Center-align the title */
+}
+
+.overlay-text ul.steps {
+    list-style: none;
+    padding: 0;
+}
+
+.overlay-text ul.steps li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.overlay-text ul.steps li:before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #007BFF;
+}
+
+.overlay-text .buttons {
+    margin-top: 20px;
+}
+
+.overlay-text .buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.overlay-text .buttons .google-play {
+    background: #34A853;
+}
+
+.overlay-text .buttons .google-play:hover {
+    background: #2C8E40;
+}
+
+.overlay-text .buttons .app-store {
+    background: #007BFF;
+}
+
+.overlay-text .buttons .app-store:hover {
+    background: #0056b3;
+}
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.image-box {
+    position: relative;
+    width: 300px;
+    height: 450px; /* Set the height to create the oval shape */
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50% / 25%; 
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease;/* Creates an oval shape */
+}
+
+.image-box button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-box button:hover {
+    background-color: #777;
+}
+.image-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgb(253, 253, 253);
+    border-color: #F8F8F8; /* Change border color on hover */
+    transition-duration: 2s;
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+}
+.state {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: #1b3526; 
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.state2 {
+    text-align: center;
+    font-size: 30px; /* Center align the text */
+  }
+  
+  .state2 h2 {
+    opacity: 0; /* Initially hide the text */
+    transform: translateY(20px); /* Move the text down slightly */
+    animation: fadeInUp 1s ease forwards; /* Apply the fadeInUp animation */
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  footer {
+    background-color: rgba(11, 23, 60, 0.3); 
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+    color:#F8F8F8
+}
+
+.footer-section h2, .footer-section h3, .footer-section h4 {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.app-links img {
+    width: 20px;
+    margin: 5px;
+}
+
+.products {
+    display: flex;
+}
+
+.product-category {
+    margin-right: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    text-align: center;
+    color: #F8F8F8;
+    
+}
+
+.social-links a img {
+    width: 20px;
+    margin: 0 5px;
+    align-items: center;
+}
+
+/* Lines between sections */
+.vertical-line {
+    width: 1px;
+    background-color: #555;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: #555;
+    margin: 20px 0;
+}
+
